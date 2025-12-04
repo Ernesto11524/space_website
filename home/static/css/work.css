@@ -1,0 +1,533 @@
+/* Work Page Hero Section */
+.work-hero-section {
+    padding: 120px 0 80px;
+    background-color: #0a0a0a;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background with subtle space effect */
+.work-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.02) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Work Header - Title and Button on same line */
+.work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Margin on left and right */
+}
+
+/* Left Aligned Title */
+.work-title {
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    margin: 0;
+    text-align: left;
+    max-width: 700px;
+}
+
+/* Right Aligned Button */
+.work-start-btn {
+    background-color: #3b82f6; /* Blue background */
+    color: #ffffff;
+    border: none;
+    padding: 16px 40px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    white-space: nowrap;
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.25);
+}
+
+.work-start-btn:hover {
+    background-color: #2563eb;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(59, 130, 246, 0.35);
+}
+
+.work-start-btn:active {
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Responsive Design for Work Hero Section */
+@media (max-width: 1200px) {
+    .work-header {
+        max-width: 1000px;
+    }
+    
+    .work-title {
+        font-size: 3.2rem;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 992px) {
+    .work-hero-section {
+        padding: 100px 0 60px;
+    }
+    
+    .work-title {
+        font-size: 2.8rem;
+        max-width: 500px;
+    }
+    
+    .work-start-btn {
+        padding: 14px 35px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .work-hero-section {
+        padding: 80px 0 50px;
+    }
+    
+    .work-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+    
+    .work-title {
+        font-size: 2.5rem;
+        max-width: 100%;
+    }
+    
+    .work-start-btn {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 576px) {
+    .work-hero-section {
+        padding: 70px 0 40px;
+    }
+    
+    .work-title {
+        font-size: 2.2rem;
+    }
+    
+    .work-start-btn {
+        padding: 13px 30px;
+        font-size: 1.05rem;
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .work-title {
+        font-size: 2rem;
+    }
+    
+    .work-start-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    
+    .work-header {
+        padding: 0 15px;
+    }
+}
+
+/* Work Projects Section */
+.work-projects-section {
+    padding: 60px 0 100px;
+    background-color: #0a0a0a;
+    position: relative;
+}
+
+/* Projects Filter */
+.projects-filter {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.filter-btn {
+    background-color: rgba(26, 26, 26, 0.7);
+    color: #9ca3af;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 24px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    color: #ffffff;
+    border-color: rgba(59, 130, 246, 0.3);
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+.filter-btn.active {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border-color: #3b82f6;
+}
+
+/* Work Projects Grid - 4 columns per row */
+.work-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+/* Work Project Card */
+.work-project-card {
+    background-color: rgba(26, 26, 26, 0.7);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.work-project-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Work Project Image */
+.work-project-image {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.work-project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.work-project-card:hover .work-project-image img {
+    transform: scale(1.05);
+}
+
+/* Work Project Overlay with View Button */
+.work-project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.work-project-card:hover .work-project-overlay {
+    opacity: 1;
+}
+
+.work-view-project-btn {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: translateY(15px);
+    opacity: 0;
+}
+
+.work-project-card:hover .work-view-project-btn {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.work-view-project-btn:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Work Project Information */
+.work-project-info {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.work-project-name {
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+}
+
+.work-project-category {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.95rem;
+    color: #3b82f6;
+    margin: 0 0 12px 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.work-project-description {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.95rem;
+    color: #9ca3af;
+    margin: 0;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.pagination-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(26, 26, 26, 0.7);
+    color: #9ca3af;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+    justify-content: center;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-btn:not(:disabled):hover {
+    color: #ffffff;
+    border-color: rgba(59, 130, 246, 0.3);
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+.pagination-numbers {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.page-number {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(26, 26, 26, 0.7);
+    color: #9ca3af;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.page-number:hover {
+    color: #ffffff;
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.page-number.active {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border-color: #3b82f6;
+}
+
+.pagination-dots {
+    color: #6b7280;
+    font-size: 1.2rem;
+    margin: 0 5px;
+}
+
+/* Responsive Design for Work Projects Section */
+@media (max-width: 1200px) {
+    .work-projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .work-projects-section {
+        padding: 50px 0 80px;
+    }
+    
+    .work-projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .work-project-image {
+        height: 200px;
+    }
+    
+    .work-project-info {
+        padding: 20px;
+    }
+    
+    .work-project-name {
+        font-size: 1.3rem;
+    }
+    
+    .filter-buttons {
+        gap: 10px;
+    }
+    
+    .filter-btn {
+        padding: 8px 18px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .work-projects-section {
+        padding: 40px 0 70px;
+    }
+    
+    .work-projects-grid {
+        gap: 25px;
+    }
+    
+    .work-project-image {
+        height: 180px;
+    }
+    
+    .projects-filter {
+        margin-bottom: 40px;
+    }
+    
+    .pagination {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .pagination-numbers {
+        order: -1;
+    }
+}
+
+@media (max-width: 576px) {
+    .work-projects-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        max-width: 400px;
+    }
+    
+    .work-project-image {
+        height: 200px;
+    }
+    
+    .filter-buttons {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+    
+    .filter-btn {
+        flex-shrink: 0;
+    }
+    
+    .pagination {
+        padding: 0 15px;
+    }
+    
+    .pagination-numbers {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .pagination-btn {
+        min-width: 140px;
+    }
+}
+
+@media (max-width: 400px) {
+    .work-projects-grid {
+        padding: 0 15px;
+    }
+    
+    .work-project-info {
+        padding: 18px;
+    }
+    
+    .work-project-name {
+        font-size: 1.2rem;
+    }
+    
+    .page-number {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Target the work page by checking if work-hero-section exists */
+.work-hero-section {
+    margin-top: -40px; /* Cancel out the main's padding */
+    padding-top: 20px; /* Add back desired padding */
+}

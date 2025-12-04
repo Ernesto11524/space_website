@@ -1,0 +1,350 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<link rel="stylesheet" href="{% static 'css/home2.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-background">
+        <!-- This will contain the galaxy background effect -->
+        <div class="galaxy-overlay"></div>
+        <div class="side-overlay left-side"></div>
+        <div class="side-overlay right-side"></div>
+    </div>
+    
+    <div class="container">
+        <div class="hero-content">
+            <!-- First Division: Main Headline -->
+            <div class="headline-section">
+                <h1 class="main-headline">
+                    <span class="line line1">SPACE — Building Digital</span>
+                    <span class="line line2">Products Beyond</span>
+                    <span class="line line3">Imagination.</span>
+                </h1>
+            </div>
+            
+            <!-- Second Division: Description Text -->
+            <div class="description-section">
+                <p class="main-description">
+                    <span class="desc-line line1">We are a digital agency specializing in innovative</span>
+                    <span class="desc-line line2">design and development. Our team crafts exceptional</span>
+                    <span class="desc-line line3">digital experiences that push boundaries and redefine possibilities.</span>
+                </p>
+            </div>
+            
+            <!-- Third Division: Buttons -->
+            <div class="hero-buttons">
+                <button class="btn btn-primary">
+                    Launch Project
+                </button>
+                <button class="btn btn-secondary">
+                    Explore Work
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Capabilities Section -->
+<section class="capabilities-section">
+    <div class="container">
+        <!-- Title Division -->
+        <div class="section-title">
+            <h2>Our Capabilities</h2>
+        </div>
+        
+        <!-- Capabilities Grid Division -->
+        <div class="capabilities-grid">
+            <!-- UI/UX Design -->
+            <a href="#" class="capability-card">
+                <div class="capability-icon">
+                    <i class="fas fa-pen-nib"></i>
+                </div>
+                <h3 class="capability-title">UI/UX Design</h3>
+            </a>
+            
+            <!-- Web Development -->
+            <a href="#" class="capability-card">
+                <div class="capability-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3 class="capability-title">Web Development</h3>
+            </a>
+            
+            <!-- Mobile App Design -->
+            <a href="#" class="capability-card">
+                <div class="capability-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3 class="capability-title">Mobile App Design</h3>
+            </a>
+            
+            <!-- Branding & Identity -->
+            <a href="#" class="capability-card">
+                <div class="capability-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3 class="capability-title">Branding & Identity</h3>
+            </a>
+            
+            <!-- Digital Strategy -->
+            <a href="#" class="capability-card">
+                <div class="capability-icon">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h3 class="capability-title">Digital Strategy</h3>
+            </a>
+            
+            <!-- Maintenance -->
+            <a href="#" class="capability-card">
+                <div class="capability-icon">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <h3 class="capability-title">Maintenance</h3>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Projects Section -->
+<section class="projects-section">
+    <div class="container">
+        <!-- Title Division with Featured Projects and View All -->
+        <div class="projects-header">
+            <h2 class="projects-title">Featured Projects</h2>
+            <a href="{% url 'work' %}" class="view-all-link">
+                View All Projects
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        
+        <!-- Projects Grid Division -->
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nexus Dashboard Project">
+                    <div class="project-overlay">
+                        <button class="view-project-btn">View Project</button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-name">Nexus Dashboard</h3>
+                    <p class="project-category">UI/UX Design • Web Development</p>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Quantum App Project">
+                    <div class="project-overlay">
+                        <button class="view-project-btn">View Project</button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-name">Quantum App</h3>
+                    <p class="project-category">Mobile App Design • Branding</p>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="EcoSphere Platform">
+                    <div class="project-overlay">
+                        <button class="view-project-btn">View Project</button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-name">EcoSphere Platform</h3>
+                    <p class="project-category">Web Development • Digital Strategy</p>
+                </div>
+            </div>
+            
+            <!-- Project 4 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Vortex Analytics">
+                    <div class="project-overlay">
+                        <button class="view-project-btn">View Project</button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-name">Vortex Analytics</h3>
+                    <p class="project-category">UI/UX Design • Branding • Development</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Meet the Team Section -->
+<section class="team-section">
+    <div class="container">
+        <!-- Title Division - Left Aligned -->
+        <div class="team-header">
+            <h2 class="team-title">Meet the Team</h2>
+        </div>
+        
+        <!-- Team Members Grid Division - Center Aligned -->
+        <div class="team-grid">
+            <!-- Team Member 1 -->
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Alex Johnson">
+                    <div class="photo-border"></div>
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Alex Johnson</h3>
+                    <p class="member-title">Creative Director</p>
+                </div>
+            </div>
+            
+            <!-- Team Member 2 -->
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sarah Chen">
+                    <div class="photo-border"></div>
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Sarah Chen</h3>
+                    <p class="member-title">Lead Developer</p>
+                </div>
+            </div>
+            
+            <!-- Team Member 3 -->
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Marcus Rivera">
+                    <div class="photo-border"></div>
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Marcus Rivera</h3>
+                    <p class="member-title">UI/UX Designer</p>
+                </div>
+            </div>
+            
+            <!-- Team Member 4 -->
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Taylor Morgan">
+                    <div class="photo-border"></div>
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Taylor Morgan</h3>
+                    <p class="member-title">Project Manager</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+    <div class="container">
+        <!-- Title Division - Left Aligned -->
+        <div class="testimonials-header">
+            <h2 class="testimonials-title">Testimonials</h2>
+        </div>
+        
+        <!-- Testimonials Grid Division - Center Aligned -->
+        <div class="testimonials-container">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Michael Rodriguez">
+                        </div>
+                        <div class="user-details">
+                            <h4 class="user-name">Michael Rodriguez</h4>
+                            <p class="testimonial-time">2 weeks ago</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-rating">
+                    <div class="stars">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        Working with SPACE was a game-changer for our startup. Their innovative approach to UI/UX design helped us create a product that truly stands out. The team was professional, responsive, and delivered beyond our expectations.
+                        <span class="read-more">... Read More</span>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Jennifer Lee">
+                        </div>
+                        <div class="user-details">
+                            <h4 class="user-name">Jennifer Lee</h4>
+                            <p class="testimonial-time">1 month ago</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-rating">
+                    <div class="stars">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        The mobile app design SPACE created for us exceeded all our expectations. Their attention to detail and understanding of user behavior resulted in an app that our customers love using daily. The entire process was smooth and collaborative.
+                        <span class="read-more">... Read More</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- View More Testimonials Button -->
+        <div class="testimonials-footer">
+            <button class="view-more-btn">
+                <span>View More Testimonials</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <!-- Text Division -->
+            <h2 class="cta-title">Ready To Launch Your Next Big Idea?</h2>
+            
+            <!-- Button Division -->
+            <button class="cta-button">
+                Start a project
+            </button>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'css/home.js' %}"></script>
+{% endblock %}

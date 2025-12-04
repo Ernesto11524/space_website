@@ -1,0 +1,367 @@
+/* Service Page Hero Section */
+.service-hero-section {
+    padding: 80px 0 60px;
+    background-color: #0a0a0a;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background with subtle effect */
+.service-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 30% 40%, rgba(59, 130, 246, 0.04) 0%, transparent 50%),
+        radial-gradient(circle at 70% 60%, rgba(139, 92, 246, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Service Header */
+.service-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left; /* Left aligned as requested */
+}
+
+/* Left Aligned Title */
+.service-title {
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    font-size: 3.8rem;
+    font-weight: 800;
+    color: #ffffff; /* White color as requested */
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    margin: 0;
+    max-width: 800px;
+}
+
+/* Fix for main padding on service page */
+body:has(.service-hero-section) main {
+    padding-top: 0;
+}
+
+/* Responsive Design for Service Hero Section */
+@media (max-width: 1200px) {
+    .service-title {
+        font-size: 3.5rem;
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 992px) {
+    .service-hero-section {
+        padding: 70px 0 50px;
+    }
+    
+    .service-title {
+        font-size: 3rem;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-hero-section {
+        padding: 60px 0 40px;
+    }
+    
+    .service-title {
+        font-size: 2.6rem;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-hero-section {
+        padding: 50px 0 30px;
+    }
+    
+    .service-title {
+        font-size: 2.3rem;
+    }
+    
+    .service-header {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .service-title {
+        font-size: 2rem;
+    }
+}
+
+/* Service Categories Section */
+.service-categories-section {
+    padding: 60px 0 100px;
+    background-color: #0a0a0a;
+    position: relative;
+}
+
+/* Section Title */
+.categories-header {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.categories-title {
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 15px 0;
+    letter-spacing: -0.3px;
+}
+
+.categories-subtitle {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.2rem;
+    color: #9ca3af;
+    margin: 0;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+/* Services Grid - 3 columns per row */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Service Card */
+.service-card {
+    background-color: rgba(26, 26, 26, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 35px 30px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(59, 130, 246, 0.5); /* Light blue border on hover */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    background-color: rgba(30, 30, 30, 0.9);
+}
+
+/* Add subtle glow effect on hover */
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+    border-radius: 14px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+/* Service Icon */
+.service-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(59, 130, 246, 0.1);
+    border-radius: 12px;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #3b82f6;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    background-color: rgba(59, 130, 246, 0.2);
+    transform: scale(1.05);
+}
+
+/* Service Name */
+.service-name {
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 15px 0;
+    line-height: 1.3;
+}
+
+/* Service Description */
+.service-description {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    color: #9ca3af;
+    margin: 0;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+/* Individual icon colors (matching home page) */
+.service-card:nth-child(1) .service-icon {
+    color: #3b82f6; /* UI/UX Design - Blue */
+}
+
+.service-card:nth-child(2) .service-icon {
+    color: #10b981; /* Web Development - Emerald */
+}
+
+.service-card:nth-child(3) .service-icon {
+    color: #8b5cf6; /* Mobile App Design - Violet */
+}
+
+.service-card:nth-child(4) .service-icon {
+    color: #f59e0b; /* Branding & Identity - Amber */
+}
+
+.service-card:nth-child(5) .service-icon {
+    color: #ef4444; /* Digital Strategy - Red */
+}
+
+.service-card:nth-child(6) .service-icon {
+    color: #06b6d4; /* Maintenance - Cyan */
+}
+
+/* Responsive Design for Service Categories */
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .service-categories-section {
+        padding: 50px 0 80px;
+    }
+    
+    .categories-header {
+        margin-bottom: 50px;
+    }
+    
+    .categories-title {
+        font-size: 2rem;
+    }
+    
+    .categories-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .service-card {
+        padding: 30px 25px;
+    }
+    
+    .service-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+    
+    .service-name {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-categories-section {
+        padding: 40px 0 70px;
+    }
+    
+    .categories-header {
+        margin-bottom: 40px;
+    }
+    
+    .services-grid {
+        gap: 20px;
+    }
+    
+    .service-card {
+        padding: 25px 20px;
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
+    
+    .service-name {
+        font-size: 1.3rem;
+    }
+    
+    .service-description {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-categories-section {
+        padding: 30px 0 60px;
+    }
+    
+    .categories-header {
+        margin-bottom: 35px;
+        padding: 0 15px;
+    }
+    
+    .categories-title {
+        font-size: 1.8rem;
+    }
+    
+    .categories-subtitle {
+        font-size: 1rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 450px;
+        padding: 0 15px;
+    }
+    
+    .service-card {
+        padding: 25px;
+    }
+    
+    .service-card:hover {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 400px) {
+    .categories-title {
+        font-size: 1.6rem;
+    }
+    
+    .service-card {
+        padding: 20px;
+    }
+    
+    .service-name {
+        font-size: 1.2rem;
+    }
+}

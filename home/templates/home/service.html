@@ -1,0 +1,90 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/service.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Service Page Hero Section -->
+<section class="service-hero-section">
+    <div class="container">
+        <div class="service-header">
+            <!-- Left Aligned Title -->
+            <h1 class="service-title">Our Services</h1>
+        </div>
+    </div>
+</section>
+
+<!-- Service Categories Section -->
+<section class="service-categories-section">
+    <div class="container">
+        <!-- Section Title -->
+        <div class="categories-header">
+            <h2 class="categories-title">Service Categories</h2>
+            <p class="categories-subtitle">We offer comprehensive digital solutions to transform your ideas into exceptional products</p>
+        </div>
+        
+        <!-- Services Grid -->
+        <div class="services-grid">
+            <!-- UI/UX Design -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-pen-nib"></i>
+                </div>
+                <h3 class="service-name">UI/UX Design</h3>
+                <p class="service-description">Crafting intuitive and engaging user interfaces that provide seamless experiences across all platforms and devices.</p>
+            </div>
+            
+            <!-- Web Development -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3 class="service-name">Web Development</h3>
+                <p class="service-description">Building responsive, high-performance websites and web applications using cutting-edge technologies and frameworks.</p>
+            </div>
+            
+            <!-- Mobile App Design -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3 class="service-name">Mobile App Design</h3>
+                <p class="service-description">Creating beautiful and functional mobile applications for iOS and Android that users love to interact with.</p>
+            </div>
+            
+            <!-- Branding & Identity -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3 class="service-name">Branding & Identity</h3>
+                <p class="service-description">Developing cohesive brand identities that communicate your vision and resonate with your target audience.</p>
+            </div>
+            
+            <!-- Digital Strategy -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h3 class="service-name">Digital Strategy</h3>
+                <p class="service-description">Planning and executing comprehensive digital strategies to maximize your online presence and business growth.</p>
+            </div>
+            
+            <!-- Maintenance -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <h3 class="service-name">Maintenance</h3>
+                <p class="service-description">Providing ongoing support, updates, and optimization to ensure your digital products perform at their best.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'js/work.js' %}"></script>
+{% endblock %}

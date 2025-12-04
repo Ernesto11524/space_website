@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Space - Innovative Solutions</title>
+    {% endblock %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block extra_css %}
+    {% endblock %}
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo and Company Name -->
+                <div class="logo-section">
+                    <div class="logo-placeholder">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h1 class="company-name">SPACE</h1>
+                </div>
+                
+                <!-- Navigation Menu -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+               <!-- In the navigation section of base.html -->
+    <ul class="nav-links" id="navLinks">
+        <li><a href="{% url 'home' %}" class="{% if request.path == '/' %}active{% endif %}">Home</a></li>
+        <li><a href="{% url 'work' %}" class="{% if request.path == '/work/' %}active{% endif %}">Work</a></li>
+        <li><a href="{% url 'services' %}" class="{% if request.path == '/service/' %}active{% endif %}">Service</a></li>
+        <li><a href="#" class="{% if request.path == '/about/' %}active{% endif %}">About</a></li>
+        <li><a href="#" class="{% if request.path == '/team/' %}active{% endif %}">Team</a></li>
+        <li><a href="#" class="{% if request.path == '/contact/' %}active{% endif %}">Contact</a></li>
+        <li>
+            <button class="launch-project-btn">Launch Project</button>
+        </li>
+    </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- First Section: Copyright -->
+                <div class="footer-section copyright-section">
+                    <p class="copyright-text">
+                        <span class="space-name">SPACE</span> © 2024 All rights reserved.
+                    </p>
+                </div>
+                
+                <!-- Second Section: Links -->
+                <div class="footer-section links-section">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                
+                <!-- Third Section: Social Media Icons -->
+                <div class="footer-section social-section">
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'js/base.js' %}"></script>
+    {% block extra_js %}
+    {% endblock %}
+</body>
+</html>
